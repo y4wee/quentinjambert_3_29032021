@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(/polices/Roboto.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'shrikhand';
+    src: url(/polices/Shrikhand.ttf) format('truetype');
+}
+.pageFlex {
+    @extend %fontGlobal;
+}
+// titres des pages menu
+.pageMenu h1{
+    font-family: 'shrikhand';
+    font-size: 1.5em;
+    font-weight: 200;
+}
+.footer {
+    &Logo {
+        font-family: 'shrikhand';
+        font-size: 1.2em;
+    }
+}
+// form localisation page d'acceuil
+.formLocalisationInput {
+    @extend %fontGlobal;
+    font-weight: bold;
+}
+.formDescription {
+    & :nth-child(1) {
+        font-size: 1.3em;
+        font-weight: bolder;
+    }   
+}
+// boutons submit des form
+.buttonSkin {
+    @extend %fontGlobal;
+}
+// h2 des cartes restaurants
+.restaurantCarteInfo h2 {
+    font-size: 1.1em;
+}

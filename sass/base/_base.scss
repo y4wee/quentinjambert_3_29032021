@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.pageFlex {
+    @extend %flex;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    @include mobile {
+        min-width: 340px;
+    }
+    @include tablette {
+        max-width: 768px;
+    }
+    @include desktop {
+        max-width: 1440px;
+    }
+}

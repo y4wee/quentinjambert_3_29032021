@@ -1,0 +1,42 @@
+//boutons submit des form
+//aspect general
+.buttonSubmitSkin {
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background: linear-gradient(
+        to right bottom,
+        $colorSecondaire,
+        $colorPrimaire
+    );
+    color: white;
+    box-shadow: 0 5px 10px lighten($colorBack3, 50%);
+}
+// boutons favoris en forme de coeur
+.buttonCoeur {
+    @include flexCenter;
+    position: relative;
+    font-size: 1.4em;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    top: 24px;
+    right: 24px;
+    input {
+        appearance: none;
+    }
+    .fa-heart {
+        color: $colorBack3;
+    }
+    :checked + .far {
+        color: $colorSecondaire;
+        font-weight: bold;
+        transition: color 1s ease-in-out;
+    }
+}
+/* .fa-gradient {
+	background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} a tester pour linear gradient*/
+// checkbox des menu

@@ -1,0 +1,24 @@
+.footer {
+    @extend %flex;
+    flex-direction: column;
+    background-color: $colorBack3;
+    padding-bottom: 35px;
+    &Logo {
+        color: white;
+        margin: 27px 0 20px 25px;
+    }
+    a {
+        @extend %flex;
+        align-items: baseline;
+        color: white;
+        text-decoration: none;
+        margin: 5px 25px;
+        p {
+            margin: 0;
+        }
+        .fas {
+            font-size: 0.8em;
+            margin-right: 12px;
+        }
+    }
+}

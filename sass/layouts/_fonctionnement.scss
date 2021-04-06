@@ -1,0 +1,44 @@
+.fonctionSection {
+    @extend %flex;
+    flex-direction: column;
+    h1 {
+        margin: $marginTitre;
+    }
+    padding-bottom: 55px;
+}
+.fonctionRule {
+    @extend %flex;
+    align-items: center;
+    width: 86%;
+    height: 74px;
+    margin: 12px auto;
+    background-color: $colorBack1;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px lighten($colorBack3, 70%);
+    &Number {
+        position: relative;
+        left: -12px;
+        width: 24px;
+        height: 24px;
+        @include flexCenter;
+        border-radius: 100%;
+        background-color: #9356dc;
+        color: $colorBack1;
+    }
+    .fas {
+        color: lighten($colorBack3, 30%);
+        font-size: 1.2em;
+        margin: 0 5px;
+    }
+    p {
+        font-weight: bold;
+        margin: 0 10px;
+    }
+    &:hover {
+        background-color: lighten($colorPrimaire,36%);
+        box-shadow: 0 5px 10px lighten($colorBack3,60%);
+        .fas {
+            color: $colorPrimaire;
+        }
+    }
+}

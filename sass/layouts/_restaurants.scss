@@ -1,0 +1,76 @@
+.restaurantSection {
+    @extend %flex;
+    flex-direction: column;
+    background-color: $colorBack1;
+    h1 {
+        margin: $marginTitre;
+    }
+    padding-bottom: 50px;
+}
+.restaurantCarte {
+    @extend %flex;
+    flex-direction: column;
+    width: 335px;
+    height: 251px;
+    margin: 10px auto;
+    border-radius: 18px;
+    box-shadow: 0 5px 10px lighten($colorBack3, 70%);
+    a {
+        text-decoration: none;
+    }
+    &Gout {
+        @include backImage(gout);
+        background-position: bottom;
+    }
+    &Enchantee {
+        @include backImage(enchantee);
+        background-position: right 50% top 60%;
+    }
+    &Francaise {
+        @include backImage(francaise);
+        background-position: bottom;
+    }
+    &Delice {
+        @include backImage(delice);
+        background-position: bottom;
+    }
+    // partie image des cartes
+    &Img {
+        @extend %flex;
+        height: 174px;
+        width: 100%;
+        justify-content: flex-end;
+        border-radius: 18px 18px 0 0;
+        & p {
+            @include flexCenter;
+            margin: 12px 12px 0 0;
+            width: 80px;
+            height: 28px;
+            background-color: $colorTertiaire;
+            color: darken($colorTertiaire,33%);
+            border-radius: 2px;
+            font-weight: bold;
+        }
+    }
+    // partie text des cartes
+    &Info {
+        @extend %flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 77px;
+        background-color: white;
+        border-radius: 0 0 18px 18px;
+        h2 {
+            margin: 16px 0 0 14px;
+        }
+        p {
+            margin: 7px 0 0 14px;
+        }
+        &Button {
+            @include flexCenter;
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "quentinjambert_3_29032021",
+  "version": "1.0.0",
+  "description": "projet 3 oc sass animation",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "author": "y4wee",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}
