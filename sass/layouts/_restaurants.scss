@@ -67,10 +67,8 @@
         p {
             margin: 7px 0 0 14px;
         }
-        &Button {
-            @include flexCenter;
-            height: 40px;
-            width: 40px;
+        .buttonCoeur {
+            margin: 24px;
         }
     }
 }

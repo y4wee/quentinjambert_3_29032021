@@ -1,31 +1,20 @@
-.footer a, .footer, .restaurantCarteInfoButton, .restaurantCarteInfo, .restaurantCarteImg p, .restaurantCarteImg, .restaurantCarte, .restaurantSection, .fonctionRuleNumber, .fonctionRule, .fonctionSection, .formAcceuil .formDescription, .formAcceuil .formLocalisation, .formAcceuil, header, .buttonCoeur, .pageFlex {
+.footer a, .footer, .restaurantCarteInfo, .restaurantCarteImg p, .restaurantCarteImg, .restaurantCarte, .restaurantSection, .fonctionRuleNumber, .fonctionRule, .fonctionSection, .formAcceuil .formDescription, .formAcceuil .formLocalisation, .formAcceuil, header, .buttonCoeur, .pageFlex {
   display: flex;
 }
 
-.buttonSkin, .formLocalisationInput, .pageFlex {
+.formLocalisationInput, .buttonSubmitSkin, .pageFlex {
   font-family: "roboto";
   font-size: 1em;
 }
 
 @font-face {
   font-family: "roboto";
-  src: url(/polices/Roboto.ttf) format("truetype");
+  src: url(../polices/Roboto.ttf) format("truetype");
 }
 @font-face {
   font-family: "shrikhand";
-  src: url(/polices/Shrikhand.ttf) format("truetype");
+  src: url(../polices/Shrikhand.ttf) format("truetype");
 }
-.pageMenu h1 {
-  font-family: "shrikhand";
-  font-size: 1.5em;
-  font-weight: 200;
-}
-
-.footerLogo {
-  font-family: "shrikhand";
-  font-size: 1.2em;
-}
-
 .formLocalisationInput {
   font-weight: bold;
 }
@@ -37,6 +26,44 @@
 
 .restaurantCarteInfo h2 {
   font-size: 1.1em;
+}
+
+.pageMenu h1 {
+  font-family: "shrikhand";
+  font-size: 1.7em;
+  font-weight: 200;
+}
+
+.footerLogo {
+  font-family: "shrikhand";
+  font-size: 1.2em;
+}
+
+.sectionMenuEntree h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #353535;
+}
+.sectionMenuPlat h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #353535;
+}
+.sectionMenuDessert h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #353535;
+}
+
+.checkboxMenuTextPlat {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.checkboxMenuTextDetail {
+  font-size: 0.9em;
+}
+.checkboxMenuTextDetailPrix {
+  font-weight: bold;
 }
 
 body {
@@ -55,7 +82,7 @@ body {
 }
 @media screen and (max-width: 599px) {
   .pageFlex {
-    min-width: 340px;
+    min-width: 350px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
@@ -73,24 +100,26 @@ body {
   height: 50px;
   border-radius: 100px;
   border: none;
+  cursor: pointer;
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   color: white;
   box-shadow: 0 5px 10px #b5b5b5;
+}
+.buttonSubmitSkin:hover {
+  background: linear-gradient(to right bottom, #ff93e1, #a16be0);
+  box-shadow: 0 5px 10px #828282;
 }
 
 .buttonCoeur {
   justify-content: center;
   align-items: center;
-  position: relative;
   font-size: 1.4em;
   width: 24px;
   height: 24px;
   cursor: pointer;
-  top: 24px;
-  right: 24px;
 }
 .buttonCoeur input {
-  appearance: none;
+  display: none;
 }
 .buttonCoeur .fa-heart {
   color: #353535;
@@ -98,7 +127,7 @@ body {
 .buttonCoeur :checked + .far {
   color: #FF79DA;
   font-weight: bold;
-  transition: color 1s ease-in-out;
+  transition: color 2s ease-in-out 0.2s;
 }
 
 /* .fa-gradient {
@@ -106,24 +135,85 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 } a tester pour linear gradient*/
-@media screen and (max-width: 599px) {
-  header {
-    height: 63px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  header img {
-    width: 163px;
-    height: auto;
-  }
-  header .fa-arrow-left {
-    position: absolute;
-    top: 19px;
-    left: 10px;
-    font-size: 1.5em;
-    color: #353535;
-  }
+.checkboxMenu {
+  display: flex;
+  width: 349px;
+  height: 68px;
+  margin: 10px auto;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px #e8e8e8;
+}
+.checkboxMenu input {
+  display: none;
+}
+.checkboxMenuText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 14px 0 14px 12px;
+  width: 337px;
+  transition: width 0.5s ease-in;
+}
+.checkboxMenuTextPlat {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.checkboxMenuTextDetail {
+  display: flex;
+}
+.checkboxMenuTextDetailPlat {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 280px;
+}
+.checkboxMenuTextDetailPrix {
+  width: 57px;
+  color: #353535;
+  text-align: center;
+}
+.checkboxMenuAnimation {
+  display: flex;
+  align-items: center;
+  width: 59px;
+  background-color: #99E2D0;
+  font-size: 1.4em;
+  color: white;
+}
+.checkboxMenuAnimation .fas {
+  margin-left: 18px;
+  transition: all 0.5s ease-in;
+}
+
+.checkboxMenu :checked + .checkboxMenuText {
+  width: 278px;
+  transition: all 0.5s ease-out;
+}
+.checkboxMenu :checked ~ * .fas {
+  transform: rotate(-360deg);
+  transition: all 0.5s ease-out;
+}
+
+header {
+  height: 63px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+header img {
+  width: 163px;
+  height: auto;
+}
+header .fa-arrow-left {
+  position: absolute;
+  top: 19px;
+  left: 20px;
+  font-size: 1.5em;
+  color: #353535;
 }
 
 .headerAcceuil {
@@ -243,22 +333,22 @@ body {
   text-decoration: none;
 }
 .restaurantCarteGout {
-  background-image: url(/images/restaurant/gout.jpg);
+  background-image: url(../images/restaurant/gout.jpg);
   background-size: cover;
   background-position: bottom;
 }
 .restaurantCarteEnchantee {
-  background-image: url(/images/restaurant/enchantee.jpg);
+  background-image: url(../images/restaurant/enchantee.jpg);
   background-size: cover;
   background-position: right 50% top 60%;
 }
 .restaurantCarteFrancaise {
-  background-image: url(/images/restaurant/francaise.jpg);
+  background-image: url(../images/restaurant/francaise.jpg);
   background-size: cover;
   background-position: bottom;
 }
 .restaurantCarteDelice {
-  background-image: url(/images/restaurant/delice.jpg);
+  background-image: url(../images/restaurant/delice.jpg);
   background-size: cover;
   background-position: bottom;
 }
@@ -293,11 +383,52 @@ body {
 .restaurantCarteInfo p {
   margin: 7px 0 0 14px;
 }
-.restaurantCarteInfoButton {
-  justify-content: center;
-  align-items: center;
-  height: 40px;
+.restaurantCarteInfo .buttonCoeur {
+  margin: 24px;
+}
+
+.MenuBanniere {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+.MenuBanniereGout {
+  background-image: url(../images/restaurant/gout.jpg);
+  background-size: cover;
+  background-position: left 60% top 50%;
+}
+.MenuBanniereText {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  border-radius: 35px 35px 0 0;
+}
+.MenuBanniereText h1 {
+  margin: 30px 0 0 20px;
+}
+.MenuBanniereText .buttonCoeur {
+  margin: 38px 30px 0 0;
+}
+
+.sectionMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  width: 100%;
+  padding-bottom: 25px;
+}
+.sectionMenu div {
+  margin: 40px auto 0;
+}
+.sectionMenu div h2 {
+  height: 30px;
   width: 40px;
+  border-bottom: solid 3px #99E2D0;
+}
+.sectionMenuButton {
+  width: 190px;
+  margin: 45px auto;
 }
 
 .footer {
@@ -311,6 +442,7 @@ body {
 }
 .footer a {
   align-items: baseline;
+  width: fit-content;
   color: white;
   text-decoration: none;
   margin: 5px 25px;
@@ -321,6 +453,9 @@ body {
 .footer a .fas {
   font-size: 0.8em;
   margin-right: 12px;
+}
+.footer a:hover {
+  color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */

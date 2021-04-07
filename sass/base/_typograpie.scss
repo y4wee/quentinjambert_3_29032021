@@ -1,25 +1,17 @@
 @font-face {
     font-family: 'roboto';
-    src: url(/polices/Roboto.ttf) format('truetype');
+    src: url(../polices/Roboto.ttf) format('truetype');
 }
 @font-face {
     font-family: 'shrikhand';
-    src: url(/polices/Shrikhand.ttf) format('truetype');
+    src: url(../polices/Shrikhand.ttf) format('truetype');
 }
 .pageFlex {
     @extend %fontGlobal;
 }
-// titres des pages menu
-.pageMenu h1{
-    font-family: 'shrikhand';
-    font-size: 1.5em;
-    font-weight: 200;
-}
-.footer {
-    &Logo {
-        font-family: 'shrikhand';
-        font-size: 1.2em;
-    }
+// boutons submit des form
+.buttonSubmitSkin {
+    @extend %fontGlobal;
 }
 // form localisation page d'acceuil
 .formLocalisationInput {
@@ -32,11 +24,51 @@
         font-weight: bolder;
     }   
 }
-// boutons submit des form
-.buttonSkin {
-    @extend %fontGlobal;
-}
 // h2 des cartes restaurants
 .restaurantCarteInfo h2 {
     font-size: 1.1em;
+}
+// titres des pages menu
+.pageMenu h1{
+    font-family: 'shrikhand';
+    font-size: 1.7em;
+    font-weight: 200;
+}
+//footer font
+.footer {
+    &Logo {
+        font-family: 'shrikhand';
+        font-size: 1.2em;
+    }
+}
+// font des h2 menu
+.sectionMenu {
+    &Entree h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+        color: $colorBack3;
+    }
+    &Plat h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+        color: $colorBack3;
+    }
+    &Dessert h2 {
+        font-size: 1.1em;
+        font-weight: normal;
+        color: $colorBack3;
+    }
+}
+//font des checkbox menu
+.checkboxMenuText {
+    &Plat {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    &Detail {
+        font-size: 0.9em;
+        &Prix {
+            font-weight: bold;
+        }
+    }
 }

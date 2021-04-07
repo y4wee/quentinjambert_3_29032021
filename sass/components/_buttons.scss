@@ -4,6 +4,7 @@
     height: 50px;
     border-radius: 100px;
     border: none;
+    cursor: pointer;
     background: linear-gradient(
         to right bottom,
         $colorSecondaire,
@@ -11,19 +12,24 @@
     );
     color: white;
     box-shadow: 0 5px 10px lighten($colorBack3, 50%);
+    &:hover {
+        background: linear-gradient(
+        to right bottom,
+        lighten($colorSecondaire, 5%),
+        lighten($colorPrimaire, 5%)
+        );
+        box-shadow: 0 5px 10px lighten($colorBack3, 30%);
+    }
 }
 // boutons favoris en forme de coeur
 .buttonCoeur {
     @include flexCenter;
-    position: relative;
     font-size: 1.4em;
     width: 24px;
     height: 24px;
     cursor: pointer;
-    top: 24px;
-    right: 24px;
     input {
-        appearance: none;
+        display: none;
     }
     .fa-heart {
         color: $colorBack3;
@@ -31,7 +37,7 @@
     :checked + .far {
         color: $colorSecondaire;
         font-weight: bold;
-        transition: color 1s ease-in-out;
+        transition: color 2s ease-in-out 0.2s;
     }
 }
 /* .fa-gradient {
@@ -40,3 +46,66 @@
 	-webkit-text-fill-color: transparent;
 } a tester pour linear gradient*/
 // checkbox des menu
+.checkboxMenu {
+    display: flex;
+    width: 349px;
+    height: 68px;
+    margin: 10px auto;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 5px 10px lighten($colorBack3, 70%);
+    input {
+        display: none;
+    }
+    &Text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 14px 0 14px 12px;
+        width: 337px;
+        transition: width 0.5s ease-in;
+        &Plat {
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        &Detail {
+            display: flex;
+            &Plat {
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                width: 280px;
+            }
+            &Prix {
+                width: 57px;
+                color: $colorBack3;
+                text-align: center;
+            }
+        }
+    }
+    &Animation {
+        display: flex;
+        align-items: center;
+        width: 59px;
+        background-color: $colorTertiaire;
+        font-size: 1.4em;
+        color: white;
+        .fas {
+            margin-left: 18px;
+            transition: all 0.5s ease-in;
+        }
+    }
+}
+.checkboxMenu :checked {
+    & + .checkboxMenuText {
+        width: 278px;
+        transition: all 0.5s ease-out;
+    }
+    & ~ * .fas {
+        transform: rotate(-360deg);
+        transition: all 0.5s ease-out;
+    }
+}

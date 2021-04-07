@@ -12,7 +12,7 @@ body {
     margin: auto;
     background-color: white;
     @include mobile {
-        min-width: 340px;
+        min-width: 350px;
     }
     @include tablette {
         max-width: 768px;

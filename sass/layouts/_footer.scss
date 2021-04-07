@@ -10,6 +10,7 @@
     a {
         @extend %flex;
         align-items: baseline;
+        width: fit-content;
         color: white;
         text-decoration: none;
         margin: 5px 25px;
@@ -20,5 +21,8 @@
             font-size: 0.8em;
             margin-right: 12px;
         }
+    }
+    a:hover {
+        color: $colorSecondaire;
     }
 }

@@ -1,21 +1,19 @@
 header {
     @extend %flex;
-    @include mobile {
-        height: 63px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        img {
-            width: 163px;
-            height: auto;
-        }
-        .fa-arrow-left {
-            position: absolute;
-            top: 19px;
-            left: 10px;
-            font-size: 1.5em;
-            color: $colorBack3;
-        }
+    height: 63px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+        width: 163px;
+        height: auto;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        top: 19px;
+        left: 20px;
+        font-size: 1.5em;
+        color: $colorBack3;
     }
 }
 .headerAcceuil {
