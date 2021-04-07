@@ -3,7 +3,7 @@
     <head>
         <!-- En-tête de la page -->
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
         <script src="https://kit.fontawesome.com/853ad8b0da.js" crossorigin="anonymous"></script>
         <title>ohmyfood - pallette du gout</title>
@@ -12,32 +12,184 @@
     <body>
         <div class="pageFlex pageMenu">
             <header class="headerMenu">
-                <a href="/index.html"><i class="fas fa-arrow-left"></i></a>
-                <img src="/images/logo/ohmyfood.svg" alt="logo ohmyfood" />
+                <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+                <img src="../images/logo/ohmyfood.svg" alt="logo ohmyfood" />
             </header>
 
-            <div class="MenuBanniere">
-                <div class="MenuBanniereImage"></div>
+            <div class="MenuBanniere MenuBanniereGout">
                 <div class="MenuBanniereText">
-                    <h1>Palette du goût</h1>
+                    <h1>La palette du goût</h1>
+                    <label class="buttonCoeur">
+                        <input type="checkbox">
+                        <i class="far fa-heart"></i>
+                    </label>
                 </div>
             </div>
             
-            <input type="checkbox" name="entree" value="1" id="e1" />
-            <label class="checkboxMenu" for="e1">
-                <span class="checkboxMenuText">
-                    <span class= "checkboxMenuTextPlat">Fricassée d'escargot</span>
-                    <span class="checkboxMenuTextDetail">Au piment d'Espelette et à la truffe noire</span>
-                </span>
-                <span class="checkboxMenuAnimation">
-                    <span class="checkboxMenuAnimationPrix">
-                        <span>25€</span>
-                    </span>
-                    <span class="checkboxMenuAnimationChecked">
-                        <i class="fas fa-check-circle"></i>
-                    </span>
-                </span>
-            </label>
+            <form class="sectionMenu">
+
+                <div class="sectionMenuEntree">
+                    <h2>ENTRÉES</h2>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Fricassée d'escargot</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Au piment d'Espelette
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">25€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Foie gras de canard mi-cuit</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Et ses copeaux de truffe noire
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">35€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Oeuf au plat</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Assaisonné à la truffe sur lit de caviar
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">20€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="sectionMenuPlat">
+                    <h2>PLATS</h2>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Filet de boeuf aux herbes</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Accompagné de sa ribambelle de légumes
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">40€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Parmentier de queue de boeuf</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    À la truffe noire sur sa purée de panais
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">35€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Filet de turbot</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Aux agrumes
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">44€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="sectionMenuDessert">
+                    <h2>DESSERTS</h2>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Paris-Brest</span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Revisité
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">18€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Macaron au chocolat d'exception </span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Et glace à la vanille de Madagascar
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">22€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                    <label class="checkboxMenu">
+                        <input type="checkbox" />
+                        <span class="checkboxMenuText">
+                            <span class= "checkboxMenuTextPlat">Mousse au chocolat </span>
+                            <class class="checkboxMenuTextDetail">
+                                <span class="checkboxMenuTextDetailPlat">
+                                    Au piment d'Espelette et à la truffe noire
+                                </span>
+                                <span class="checkboxMenuTextDetailPrix">23€</span>
+                            </span>
+                        </span>
+                        <span class="checkboxMenuAnimation">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
+                </div>
+                <input class="sectionMenuButton buttonSubmitSkin" type="submit" value="Commander">
+            </form>
+
+            <footer class="footer">
+                <p class="footerLogo">ohmyfood</p>
+                <a href="#">
+                    <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </a>
+                <a href="#">
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Devenir partenaire</p>
+                </a>
+                <a href="#">Mentions légales</a>
+                <a href="mailto:ohmyfood@gmail.com">Contact</a>
+            </footer>
         </div>
     </body>
 </html>
