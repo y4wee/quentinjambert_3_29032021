@@ -1,20 +1,24 @@
-.footer a, .footer, .restaurantCarteInfo, .restaurantCarteImg p, .restaurantCarteImg, .restaurantCarte, .restaurantSection, .fonctionRuleNumber, .fonctionRule, .fonctionSection, .formAcceuil .formDescription, .formAcceuil .formLocalisation, .formAcceuil, header, .buttonCoeur, .pageFlex {
+.pageFlex, .buttonCoeur, header, .formAcceuil, .formAcceuil .formLocalisation, .formAcceuil .formDescription, .fonctionSection, .fonctionRule, .fonctionRuleNumber, .restaurantSection, .restaurantCarte, .restaurantCarteImg, .restaurantCarteImg p, .restaurantCarteInfo, .footer, .footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.formLocalisationInput, .buttonSubmitSkin, .pageFlex {
-  font-family: "roboto";
+.pageFlex, .buttonSubmitSkin, .formLocalisationInput {
+  font-family: 'roboto';
   font-size: 1em;
 }
 
 @font-face {
-  font-family: "roboto";
+  font-family: 'roboto';
   src: url(../polices/Roboto.ttf) format("truetype");
 }
+
 @font-face {
-  font-family: "shrikhand";
+  font-family: 'shrikhand';
   src: url(../polices/Shrikhand.ttf) format("truetype");
 }
+
 .formLocalisationInput {
   font-weight: bold;
 }
@@ -29,13 +33,13 @@
 }
 
 .pageMenu h1 {
-  font-family: "shrikhand";
+  font-family: 'shrikhand';
   font-size: 1.7em;
   font-weight: 200;
 }
 
 .footerLogo {
-  font-family: "shrikhand";
+  font-family: 'shrikhand';
   font-size: 1.2em;
 }
 
@@ -44,11 +48,13 @@
   font-weight: normal;
   color: #353535;
 }
+
 .sectionMenuPlat h2 {
   font-size: 1.1em;
   font-weight: normal;
   color: #353535;
 }
+
 .sectionMenuDessert h2 {
   font-size: 1.1em;
   font-weight: normal;
@@ -59,9 +65,11 @@
   font-weight: bold;
   font-size: 1.1em;
 }
+
 .checkboxMenuTextDetail {
   font-size: 0.9em;
 }
+
 .checkboxMenuTextDetailPrix {
   font-weight: bold;
 }
@@ -74,21 +82,27 @@ body {
 }
 
 .pageFlex {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   margin: auto;
   background-color: white;
 }
+
 @media screen and (max-width: 599px) {
   .pageFlex {
     min-width: 350px;
   }
 }
+
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .pageFlex {
     max-width: 768px;
   }
 }
+
 @media screen and (min-width: 1025px) {
   .pageFlex {
     max-width: 1440px;
@@ -100,18 +114,27 @@ body {
   border-radius: 100px;
   border: none;
   cursor: pointer;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   color: white;
-  box-shadow: 0 5px 10px #b5b5b5;
+  -webkit-box-shadow: 0 5px 10px #b5b5b5;
+          box-shadow: 0 5px 10px #b5b5b5;
 }
+
 .buttonSubmitSkin:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff93e1), to(#a16be0));
   background: linear-gradient(to right bottom, #ff93e1, #a16be0);
-  box-shadow: 0 5px 10px #828282;
+  -webkit-box-shadow: 0 5px 10px #828282;
+          box-shadow: 0 5px 10px #828282;
 }
 
 .buttonCoeur {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.4em;
   width: 24px;
   height: 24px;
@@ -119,38 +142,40 @@ body {
   background-color: inherit;
   position: relative;
 }
+
 .buttonCoeurCache {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: initial;
-  top: 0;
 }
+
 .buttonCoeur input {
-  appearance: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  outline: none;
-  cursor: pointer;
+  display: none;
 }
+
 .buttonCoeur .fa-heart {
   color: #353535;
 }
 
-.buttonCoeur input:checked ~ .far {
-  font-weight: bold;
+.buttonCoeur :checked + .far {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.buttonCoeur input:checked ~ span.buttonCoeurCache {
-  background-color: inherit;
-  height: 0%;
-  transition: height 0.4s ease-in-out 0.1s;
+  font-weight: bold;
 }
 
+.buttonCoeur :checked .buttonCoeurCache {
+  background-color: inherit;
+}
+
+/* .fa-gradient {
+	background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} a tester pour linear gradient*/
 .checkboxMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 349px;
   height: 68px;
@@ -159,70 +184,104 @@ body {
   cursor: pointer;
   overflow: hidden;
   border-radius: 14px;
-  box-shadow: 0 5px 10px #e8e8e8;
+  -webkit-box-shadow: 0 5px 10px #e8e8e8;
+          box-shadow: 0 5px 10px #e8e8e8;
 }
+
 .checkboxMenu input {
   display: none;
 }
+
 .checkboxMenuText {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 14px 0 14px 12px;
   width: 337px;
+  -webkit-transition: width 0.5s ease-in;
   transition: width 0.5s ease-in;
 }
+
 .checkboxMenuTextPlat {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .checkboxMenuTextDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .checkboxMenuTextDetailPlat {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 280px;
 }
+
 .checkboxMenuTextDetailPrix {
   width: 57px;
   color: #353535;
   text-align: center;
 }
+
 .checkboxMenuAnimation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 59px;
   background-color: #99E2D0;
   font-size: 1.4em;
   color: white;
 }
+
 .checkboxMenuAnimation .fas {
   margin-left: 18px;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
 .checkboxMenu :checked + .checkboxMenuText {
   width: 278px;
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+
 .checkboxMenu :checked ~ * .fas {
-  transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
 header {
   height: 63px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
+
 header img {
   width: 163px;
   height: auto;
 }
+
 header .fa-arrow-left {
   position: absolute;
   top: 19px;
@@ -232,20 +291,32 @@ header .fa-arrow-left {
 }
 
 .headerAcceuil {
-  box-shadow: 0 1px 5px #b5b5b5;
+  -webkit-box-shadow: 0 1px 5px #b5b5b5;
+          box-shadow: 0 1px 5px #b5b5b5;
 }
 
 .formAcceuil {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .formAcceuil .formLocalisation {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 50px;
   background-color: #eaeaea;
 }
+
 .formAcceuil .formLocalisationInput {
   background-color: #eaeaea;
   color: #353535;
@@ -253,129 +324,180 @@ header .fa-arrow-left {
   height: 50px;
   width: 120px;
 }
+
 .formAcceuil .formLocalisationInput:focus {
   outline: none;
 }
+
 .formAcceuil .formLocalisationMarker {
   color: #353535;
   margin-right: 18px;
 }
+
 .formAcceuil .formDescription {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 100%;
   background-color: #f6f6f6;
 }
+
 .formAcceuil .formDescription :nth-child(1) {
   max-width: 200px;
   margin: 40px 0 15px;
 }
+
 .formAcceuil .formDescription :nth-child(2) {
   max-width: 300px;
   color: #353535;
   margin: 0;
 }
+
 .formAcceuil .formDescriptionButton {
   width: 218px;
   margin: 30px 0 55px;
 }
 
 .fonctionSection {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-bottom: 55px;
 }
+
 .fonctionSection h1 {
   margin: 50px 0 20px 22px;
 }
 
 .fonctionRule {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 86%;
   height: 74px;
   margin: 12px auto;
   background-color: #f6f6f6;
   border-radius: 25px;
-  box-shadow: 0 5px 10px #e8e8e8;
+  -webkit-box-shadow: 0 5px 10px #e8e8e8;
+          box-shadow: 0 5px 10px #e8e8e8;
 }
+
 .fonctionRuleNumber {
   position: relative;
   left: -12px;
   width: 24px;
   height: 24px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 100%;
   background-color: #9356dc;
   color: #f6f6f6;
 }
+
 .fonctionRule .fas {
   color: #828282;
   font-size: 1.2em;
   margin: 0 5px;
 }
+
 .fonctionRule p {
   font-weight: bold;
   margin: 0 10px;
 }
+
 .fonctionRule:hover {
   background-color: #f4eefc;
-  box-shadow: 0 5px 10px #cecece;
+  -webkit-box-shadow: 0 5px 10px #cecece;
+          box-shadow: 0 5px 10px #cecece;
 }
+
 .fonctionRule:hover .fas {
   color: #9356DC;
 }
 
 .restaurantSection {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f6f6f6;
   padding-bottom: 50px;
 }
+
 .restaurantSection h1 {
   margin: 50px 0 20px 22px;
 }
 
 .restaurantCarte {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 335px;
   height: 251px;
   margin: 10px auto;
   border-radius: 18px;
-  box-shadow: 0 5px 10px #e8e8e8;
+  -webkit-box-shadow: 0 5px 10px #e8e8e8;
+          box-shadow: 0 5px 10px #e8e8e8;
 }
+
 .restaurantCarte a {
   text-decoration: none;
 }
+
 .restaurantCarteGout {
   background-image: url(../images/restaurant/gout.jpg);
   background-size: cover;
   background-position: bottom;
 }
+
 .restaurantCarteEnchantee {
   background-image: url(../images/restaurant/enchantee.jpg);
   background-size: cover;
   background-position: right 50% top 60%;
 }
+
 .restaurantCarteFrancaise {
   background-image: url(../images/restaurant/francaise.jpg);
   background-size: cover;
   background-position: bottom;
 }
+
 .restaurantCarteDelice {
   background-image: url(../images/restaurant/delice.jpg);
   background-size: cover;
   background-position: bottom;
 }
+
 .restaurantCarteImg {
   height: 174px;
   width: 100%;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   border-radius: 18px 18px 0 0;
 }
+
 .restaurantCarteImg p {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 12px 12px 0 0;
   width: 80px;
   height: 28px;
@@ -384,93 +506,133 @@ header .fa-arrow-left {
   border-radius: 2px;
   font-weight: bold;
 }
+
 .restaurantCarteInfo {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   height: 77px;
   background-color: white;
   border-radius: 0 0 18px 18px;
 }
+
 .restaurantCarteInfo h2 {
   margin: 16px 0 0 14px;
 }
+
 .restaurantCarteInfo p {
   margin: 7px 0 0 14px;
 }
+
 .restaurantCarteInfo .buttonCoeur {
   margin: 24px;
 }
 
 .MenuBanniere {
   height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
+
 .MenuBanniereGout {
   background-image: url(../images/restaurant/gout.jpg);
   background-size: cover;
   background-position: left 60% top 50%;
 }
+
 .MenuBanniereText {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #f6f6f6;
   border-radius: 35px 35px 0 0;
 }
+
 .MenuBanniereText h1 {
   margin: 30px 0 0 20px;
 }
+
 .MenuBanniereText .buttonCoeur {
   margin: 38px 30px 0 0;
 }
 
 .sectionMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f6f6f6;
   width: 100%;
   padding-bottom: 25px;
 }
+
 .sectionMenu div {
   margin: 40px auto 0;
 }
+
 .sectionMenu div h2 {
   height: 30px;
   width: 40px;
   border-bottom: solid 3px #99E2D0;
 }
+
 .sectionMenuButton {
   width: 190px;
   margin: 45px auto;
 }
 
 .footer {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #353535;
   padding-bottom: 35px;
 }
+
 .footerLogo {
   color: white;
   margin: 27px 0 20px 25px;
 }
+
 .footer a {
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   color: white;
   text-decoration: none;
   margin: 5px 25px;
 }
+
 .footer a p {
   margin: 0;
 }
+
 .footer a .fas {
   font-size: 0.8em;
   margin-right: 12px;
 }
+
 .footer a:hover {
   color: #FF79DA;
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

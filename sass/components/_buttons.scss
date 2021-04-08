@@ -28,23 +28,40 @@
     width: 24px;
     height: 24px;
     cursor: pointer;
+    background-color: inherit;
+    position: relative;
+    &Cache {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: initial;
+        top: 0;
+    }
     input {
-        display: none;
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        outline: none;
+        cursor: pointer;
     }
     .fa-heart {
         color: $colorBack3;
     }
-    :checked + .far {
-        color: $colorSecondaire;
+}
+.buttonCoeur input:checked {
+    ~ .far {
         font-weight: bold;
-        transition: color 2s ease-in-out 0.2s;
+        background: -webkit-gradient(linear, left top, right bottom, from($colorSecondaire), to($colorPrimaire));
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    }
+    ~ span.buttonCoeurCache {
+        background-color: inherit;
+        height: 0%;
+        transition: height 0.4s ease-in-out 0.1s;
     }
 }
-/* .fa-gradient {
-	background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-} a tester pour linear gradient*/
 // checkbox des menu
 .checkboxMenu {
     display: flex;
