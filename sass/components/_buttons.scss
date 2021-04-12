@@ -12,13 +12,13 @@
     );
     color: white;
     box-shadow: 0 5px 10px lighten($colorBack3, 50%);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
+    opacity: 1;
     &:hover {
-        background: linear-gradient(
-        to right bottom,
-        lighten($colorSecondaire, 5%),
-        lighten($colorPrimaire, 5%)
-        );
+        opacity: 0.85;
         box-shadow: 0 5px 10px lighten($colorBack3, 30%);
+        transform: scale(1.05);
     }
 }
 // boutons favoris en forme de coeur
@@ -30,6 +30,8 @@
     cursor: pointer;
     background-color: inherit;
     position: relative;
+    transform: scale(1);
+    transition: transform 0.2s ease-out;
     &Cache {
         position: absolute;
         width: 100%;
@@ -48,7 +50,11 @@
     .fa-heart {
         color: $colorBack3;
     }
+    &:hover {
+        transform: scale(1.2);
+    }
 }
+// bouton coeur checked
 .buttonCoeur input:checked {
     ~ .far {
         font-weight: bold;
@@ -59,22 +65,27 @@
     ~ span.buttonCoeurCache {
         background-color: inherit;
         height: 0%;
-        transition: height 0.4s ease-in-out 0.1s;
+        transition: height 0.65s ease-out;
     }
 }
 // checkbox des menu
 .checkboxMenu {
     display: flex;
+    position: relative;
     width: 349px;
     height: 68px;
     margin: 10px auto;
     background-color: white;
-    cursor: pointer;
     overflow: hidden;
     border-radius: 14px;
     box-shadow: 0 5px 10px lighten($colorBack3, 70%);
     input {
-        display: none;
+        appearance: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        cursor: pointer;
     }
     &Text {
         display: flex;
@@ -82,11 +93,13 @@
         justify-content: space-between;
         margin: 14px 0 14px 12px;
         width: 337px;
-        transition: width 0.5s ease-in;
+        transition: width 0.4s ease-in;
         &Plat {
             overflow: hidden;
             text-overflow:ellipsis;
             white-space: nowrap;
+            width: 100%;
+            transition: width 0.4s ease-out;
         }
         &Detail {
             display: flex;
@@ -112,17 +125,19 @@
         color: white;
         .fas {
             margin-left: 18px;
-            transition: all 0.5s ease-in;
+            transition: transform 0.4s ease-in-out;
         }
     }
 }
-.checkboxMenu :checked {
-    & + .checkboxMenuText {
+.checkboxMenu input:checked {
+    & ~ .checkboxMenuText {
         width: 278px;
-        transition: all 0.5s ease-out;
+        transition: width 0.4s ease-out;
+    }
+    & ~ * .checkboxMenuTextPlat {
+        width: 230px;
     }
     & ~ * .fas {
         transform: rotate(-360deg);
-        transition: all 0.5s ease-out;
     }
 }

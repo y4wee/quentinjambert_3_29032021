@@ -103,10 +103,14 @@ body {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   color: white;
   box-shadow: 0 5px 10px #b5b5b5;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
+  opacity: 1;
 }
 .buttonSubmitSkin:hover {
-  background: linear-gradient(to right bottom, #ff93e1, #a16be0);
+  opacity: 0.85;
   box-shadow: 0 5px 10px #828282;
+  transform: scale(1.05);
 }
 
 .buttonCoeur {
@@ -118,6 +122,8 @@ body {
   cursor: pointer;
   background-color: inherit;
   position: relative;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
 }
 .buttonCoeurCache {
   position: absolute;
@@ -137,6 +143,9 @@ body {
 .buttonCoeur .fa-heart {
   color: #353535;
 }
+.buttonCoeur:hover {
+  transform: scale(1.2);
+}
 
 .buttonCoeur input:checked ~ .far {
   font-weight: bold;
@@ -147,22 +156,27 @@ body {
 .buttonCoeur input:checked ~ span.buttonCoeurCache {
   background-color: inherit;
   height: 0%;
-  transition: height 0.4s ease-in-out 0.1s;
+  transition: height 0.65s ease-out;
 }
 
 .checkboxMenu {
   display: flex;
+  position: relative;
   width: 349px;
   height: 68px;
   margin: 10px auto;
   background-color: white;
-  cursor: pointer;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 5px 10px #e8e8e8;
 }
 .checkboxMenu input {
-  display: none;
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: pointer;
 }
 .checkboxMenuText {
   display: flex;
@@ -170,12 +184,14 @@ body {
   justify-content: space-between;
   margin: 14px 0 14px 12px;
   width: 337px;
-  transition: width 0.5s ease-in;
+  transition: width 0.4s ease-in;
 }
 .checkboxMenuTextPlat {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
+  transition: width 0.4s ease-out;
 }
 .checkboxMenuTextDetail {
   display: flex;
@@ -201,16 +217,18 @@ body {
 }
 .checkboxMenuAnimation .fas {
   margin-left: 18px;
-  transition: all 0.5s ease-in;
+  transition: transform 0.4s ease-in-out;
 }
 
-.checkboxMenu :checked + .checkboxMenuText {
+.checkboxMenu input:checked ~ .checkboxMenuText {
   width: 278px;
-  transition: all 0.5s ease-out;
+  transition: width 0.4s ease-out;
 }
-.checkboxMenu :checked ~ * .fas {
+.checkboxMenu input:checked ~ * .checkboxMenuTextPlat {
+  width: 230px;
+}
+.checkboxMenu input:checked ~ * .fas {
   transform: rotate(-360deg);
-  transition: all 0.5s ease-out;
 }
 
 header {
@@ -399,7 +417,7 @@ header .fa-arrow-left {
   margin: 7px 0 0 14px;
 }
 .restaurantCarteInfo .buttonCoeur {
-  margin: 24px;
+  margin: auto 15px;
 }
 
 .MenuBanniere {
@@ -423,7 +441,7 @@ header .fa-arrow-left {
   margin: 30px 0 0 20px;
 }
 .MenuBanniereText .buttonCoeur {
-  margin: 38px 30px 0 0;
+  margin: 30px 30px 0 0;
 }
 
 .sectionMenu {
@@ -432,6 +450,7 @@ header .fa-arrow-left {
   background-color: #f6f6f6;
   width: 100%;
   padding-bottom: 25px;
+  margin-top: -2px;
 }
 .sectionMenu div {
   margin: 40px auto 0;
