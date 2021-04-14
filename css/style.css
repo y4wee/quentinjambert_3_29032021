@@ -84,15 +84,127 @@ body {
     min-width: 350px;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-  .pageFlex {
-    max-width: 768px;
-  }
-}
 @media screen and (min-width: 1025px) {
   .pageFlex {
     max-width: 1440px;
   }
+}
+
+@keyframes loaderOut {
+  100% {
+    z-index: -1000;
+  }
+}
+@keyframes spinnerOpacity {
+  15%, 85% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes arcRotateBefore {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-top-color: #FF79DA;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes arcRotateAfter {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-top-color: #99E2D0;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spinnerText {
+  12.5% {
+    text-shadow: 0px 0px 10px #9356DC;
+  }
+  25% {
+    text-shadow: 0px 0px 30px #FF79DA;
+  }
+  37.5% {
+    text-shadow: 0px 0px 10px #FF79DA;
+  }
+  50% {
+    text-shadow: 0px 0px 30px #99E2D0;
+  }
+  62.5% {
+    text-shadow: 0px 0px 10px #99E2D0;
+  }
+  75% {
+    text-shadow: 0px 0px 30px #FF79DA;
+  }
+  87.5% {
+    text-shadow: 0px 0px 10px #FF79DA;
+  }
+}
+@keyframes slideBackLeft {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideBackRight {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes pulseCoeur {
+  50% {
+    transform: scale(1.2);
+  }
+}
+.spinner {
+  position: relative;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  transform: scale(0);
+  opacity: 0;
+  animation: loaderOut 0.1s 3.6s linear, spinnerOpacity 3s 0.2s ease-in-out;
+}
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: solid 3px transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: arcRotateBefore 0.9s cubic-bezier(0.2, 0, 0.8, 1) infinite;
+}
+.spinner::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: solid 3px transparent;
+  border-top-color: #353535;
+  border-radius: 50%;
+  animation: arcRotateAfter 0.9s cubic-bezier(0.2, 0, 0.8, 1) infinite;
+}
+.spinnerLetter {
+  width: fit-content;
+  display: inline-block;
+  font-family: "shrikhand";
+  font-size: 1.8em;
+  color: #353535;
+  text-shadow: 0px 0px 10px #9356DC;
+  animation: spinnerText 2.5s 0.2s linear infinite;
 }
 
 .buttonSubmitSkin {
@@ -142,9 +254,7 @@ body {
 }
 .buttonCoeur .fa-heart {
   color: #353535;
-}
-.buttonCoeur:hover {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .buttonCoeur input:checked ~ .far {
@@ -152,11 +262,12 @@ body {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: pulseCoeur 0.2s 0.45s;
 }
 .buttonCoeur input:checked ~ span.buttonCoeurCache {
   background-color: inherit;
   height: 0%;
-  transition: height 0.65s ease-out;
+  transition: height 0.5s ease-out;
 }
 
 .checkboxMenu {
@@ -229,6 +340,37 @@ body {
 }
 .checkboxMenu input:checked ~ * .fas {
   transform: rotate(-360deg);
+}
+
+.loader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loaderOut 0.1s 3.6s linear forwards;
+}
+.loaderBackLeft {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  background-color: #eaeaea;
+  z-index: 10;
+  animation: slideBackLeft 0.4s 3.1s ease-in forwards;
+}
+.loaderBackRight {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 51%;
+  height: 100%;
+  background-color: #eaeaea;
+  z-index: 10;
+  animation: slideBackRight 0.4s 3.1s ease-in forwards;
 }
 
 header {
@@ -441,7 +583,7 @@ header .fa-arrow-left {
   margin: 30px 0 0 20px;
 }
 .MenuBanniereText .buttonCoeur {
-  margin: 30px 30px 0 0;
+  margin: 38px 30px 0 0;
 }
 
 .sectionMenu {

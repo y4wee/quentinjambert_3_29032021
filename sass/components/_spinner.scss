@@ -1,0 +1,47 @@
+.spinner {
+    position: relative;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    transform: scale(0);
+    opacity: 0;
+    animation: loaderOut 0.1s 3.6s linear, spinnerOpacity 3s 0.2s ease-in-out;
+    &::before {
+        //arc de cercle
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border: solid 3px transparent;
+        border-top-color: $colorPrimaire;
+        border-radius: 50%;
+        animation: arcRotateBefore 0.9s cubic-bezier(0.20,0,.80,1) infinite;
+    }
+    &::after {
+        //arc de cercle
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: solid 3px transparent;
+        border-top-color: $colorBack3;
+        border-radius: 50%;
+        animation: arcRotateAfter 0.9s cubic-bezier(0.20,0,.80,1) infinite;
+    }
+    &Letter {
+        width: fit-content;
+        display: inline-block;
+        font-family: 'shrikhand';
+        font-size: 1.8em;
+        color: $colorBack3;
+        text-shadow: 0px 0px 10px $colorPrimaire;
+        animation: spinnerText 2.5s 0.2s linear infinite;
+    }
+}

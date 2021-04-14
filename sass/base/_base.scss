@@ -13,9 +13,6 @@ body {
     @include mobile {
         min-width: 350px;
     }
-    @include tablette {
-        max-width: 768px;
-    }
     @include desktop {
         max-width: 1440px;
     }

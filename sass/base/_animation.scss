@@ -1,0 +1,78 @@
+// animation block loader
+@keyframes loaderOut {
+    100% {
+        z-index: -1000;
+    }
+}
+// aparition spinner
+@keyframes spinnerOpacity {
+    15%,85% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+//animation Spinner loader arc de cercle
+@keyframes arcRotateBefore {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        border-top-color: $colorSecondaire;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes arcRotateAfter {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        border-top-color: $colorTertiaire;
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+// animation spinnerText
+@keyframes spinnerText {
+    12.5% {
+        text-shadow: 0px 0px 10px $colorPrimaire;
+    }
+    25% {
+        text-shadow: 0px 0px 30px $colorSecondaire;
+    }
+    37.5% {
+        text-shadow: 0px 0px 10px $colorSecondaire;
+    }
+    50% {
+        text-shadow: 0px 0px 30px $colorTertiaire;
+    }
+    62.5% {
+        text-shadow: 0px 0px 10px $colorTertiaire;
+    }
+    75% {
+        text-shadow: 0px 0px 30px $colorSecondaire;
+    }
+    87.5% {
+        text-shadow: 0px 0px 10px $colorSecondaire;
+    }
+}
+//animation slide backleft
+@keyframes slideBackLeft {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideBackRight {
+    100% {
+        transform: translateX(100%);
+    }
+}
+//animation slide backright
+// animation pulste bouton favoris
+@keyframes pulseCoeur {
+    50% {
+        transform: scale(1.2);
+    }
+}

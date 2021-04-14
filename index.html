@@ -16,6 +16,20 @@
     </head>
 
     <body>
+        <div class="loader">
+            <div class="loaderSpinner spinner">
+                <span class="spinnerLetter">o</span>
+                <span class="spinnerLetter">h</span>
+                <span class="spinnerLetter">m</span>
+                <span class="spinnerLetter">y</span>
+                <span class="spinnerLetter">f</span>
+                <span class="spinnerLetter">o</span>
+                <span class="spinnerLetter">o</span>
+                <span class="spinnerLetter">d</span>
+            </div>
+            <div class="loaderBackLeft"></div>
+            <div class="loaderBackRight"></div>
+        </div>
         <div class="pageFlex pageAcceuil">
             <header class="headerAcceuil">
                 <img src="./images/logo/ohmyfood.svg" alt="logo ohmyfood" />
@@ -64,8 +78,8 @@
                     <div class="restaurantCarteInfo">
                         <h2>La palette du goût</h2>
                         <p>Ménilmontant</p>
-                        <label class="buttonCoeur">
-                            <input type="checkbox">
+                        <label class="buttonCoeur" for="favorisGout">
+                            <input type="checkbox" id="favorisGout">
                             <i class="far fa-heart"></i>
                             <span class="buttonCoeurCache"></span>
                         </label>
@@ -78,8 +92,8 @@
                     <div class="restaurantCarteInfo">
                         <h2>La note enchantée</h2>
                         <p>Charonne</p>
-                        <label class="buttonCoeur">
-                            <input type="checkbox">
+                        <label class="buttonCoeur" for="favorisEnchantee">
+                            <input type="checkbox" id="favorisEnchantee">
                             <i class="far fa-heart"></i>
                             <span class="buttonCoeurCache"></span>
                         </label>
@@ -92,8 +106,8 @@
                     <div class="restaurantCarteInfo">
                         <h2>À la française</h2>
                         <p>cité Rouge</p>
-                        <label class="buttonCoeur">
-                            <input type="checkbox">
+                        <label class="buttonCoeur" for="favorisFrancaise">
+                            <input type="checkbox" id="favorisFrancaise">
                             <i class="far fa-heart"></i>
                             <span class="buttonCoeurCache"></span>
                         </label>
@@ -106,8 +120,8 @@
                     <div class="restaurantCarteInfo">
                         <h2>Le délice des sens</h2>
                         <p>Folie-Méricourt</p>
-                        <label class="buttonCoeur">
-                            <input type="checkbox">
+                        <label class="buttonCoeur" for="favorisDelice">
+                            <input type="checkbox" id="favorisDelice">
                             <i class="far fa-heart"></i>
                             <span class="buttonCoeurCache"></span>
                         </label>

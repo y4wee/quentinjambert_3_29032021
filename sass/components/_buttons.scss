@@ -49,9 +49,7 @@
     }
     .fa-heart {
         color: $colorBack3;
-    }
-    &:hover {
-        transform: scale(1.2);
+        transform: scale(1);
     }
 }
 // bouton coeur checked
@@ -61,11 +59,12 @@
         background: -webkit-gradient(linear, left top, right bottom, from($colorSecondaire), to($colorPrimaire));
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
+        animation: pulseCoeur 0.2s 0.45s;
     }
     ~ span.buttonCoeurCache {
         background-color: inherit;
         height: 0%;
-        transition: height 0.65s ease-out;
+        transition: height 0.5s ease-out;
     }
 }
 // checkbox des menu

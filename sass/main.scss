@@ -4,7 +4,10 @@
 @import "./utils/placeholders";
 @import "./base/typograpie";
 @import "./base/base";
+@import "./base/animation";
+@import "./components/spinner";
 @import "./components/buttons";
+@import "./layouts/loader";
 @import "./layouts/header";
 @import "./layouts/form";
 @import "./layouts/fonctionnement";
