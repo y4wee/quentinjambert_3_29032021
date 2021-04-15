@@ -128,19 +128,19 @@ body {
     text-shadow: 0px 0px 10px #9356DC;
   }
   25% {
-    text-shadow: 0px 0px 30px #FF79DA;
+    text-shadow: 0px 5px 30px #FF79DA;
   }
   37.5% {
     text-shadow: 0px 0px 10px #FF79DA;
   }
   50% {
-    text-shadow: 0px 0px 30px #99E2D0;
+    text-shadow: 0px 5px 30px #99E2D0;
   }
   62.5% {
     text-shadow: 0px 0px 10px #99E2D0;
   }
   75% {
-    text-shadow: 0px 0px 30px #FF79DA;
+    text-shadow: 0px 5px 30px #FF79DA;
   }
   87.5% {
     text-shadow: 0px 0px 10px #FF79DA;
@@ -159,6 +159,29 @@ body {
 @keyframes pulseCoeur {
   50% {
     transform: scale(1.2);
+  }
+}
+@keyframes menuOpacity {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes buttonOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 .spinner {
@@ -183,7 +206,7 @@ body {
   border: solid 3px transparent;
   border-top-color: #9356DC;
   border-radius: 50%;
-  animation: arcRotateBefore 0.9s cubic-bezier(0.2, 0, 0.8, 1) infinite;
+  animation: arcRotateBefore 0.9s 0.2s cubic-bezier(0.2, 0, 0.8, 1) infinite;
 }
 .spinner::after {
   content: "";
@@ -195,16 +218,15 @@ body {
   border: solid 3px transparent;
   border-top-color: #353535;
   border-radius: 50%;
-  animation: arcRotateAfter 0.9s cubic-bezier(0.2, 0, 0.8, 1) infinite;
+  animation: arcRotateAfter 0.9s 0.2s cubic-bezier(0.2, 0, 0.8, 1) infinite;
 }
 .spinnerLetter {
   width: fit-content;
-  display: inline-block;
   font-family: "shrikhand";
   font-size: 1.8em;
   color: #353535;
-  text-shadow: 0px 0px 10px #9356DC;
-  animation: spinnerText 2.5s 0.2s linear infinite;
+  text-shadow: 0px 5px 30px #9356DC;
+  animation: spinnerText 3s 0.2s linear infinite;
 }
 
 .buttonSubmitSkin {
@@ -216,13 +238,12 @@ body {
   color: white;
   box-shadow: 0 5px 10px #b5b5b5;
   transform: scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
-  opacity: 1;
+  transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out 0.1s;
 }
 .buttonSubmitSkin:hover {
   opacity: 0.85;
   box-shadow: 0 5px 10px #828282;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .buttonCoeur {
@@ -360,7 +381,7 @@ body {
   height: 100%;
   background-color: #eaeaea;
   z-index: 10;
-  animation: slideBackLeft 0.4s 3.1s ease-in forwards;
+  animation: slideBackLeft 0.4s 3.2s ease-in forwards;
 }
 .loaderBackRight {
   position: fixed;
@@ -370,7 +391,7 @@ body {
   height: 100%;
   background-color: #eaeaea;
   z-index: 10;
-  animation: slideBackRight 0.4s 3.1s ease-in forwards;
+  animation: slideBackRight 0.4s 3.2s ease-in forwards;
 }
 
 header {
@@ -605,6 +626,206 @@ header .fa-arrow-left {
 .sectionMenuButton {
   width: 190px;
   margin: 45px auto;
+}
+
+.sectionMenuGout .sectionMenuEntree {
+  animation: menuOpacity 0.25s 0.2s ease-out both;
+}
+.sectionMenuGout .sectionMenuEntree1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.25s;
+}
+.sectionMenuGout .sectionMenuEntree2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.4s;
+}
+.sectionMenuGout .sectionMenuEntree3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.55s;
+}
+.sectionMenuGout .sectionMenuPlat {
+  animation: menuOpacity 0.25s 0.75s ease-out both;
+}
+.sectionMenuGout .sectionMenuPlat1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1s;
+}
+.sectionMenuGout .sectionMenuPlat2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.15s;
+}
+.sectionMenuGout .sectionMenuPlat3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.3s;
+}
+.sectionMenuGout .sectionMenuDessert {
+  animation: menuOpacity 0.25s 1.5s ease-out both;
+}
+.sectionMenuGout .sectionMenuDessert1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.75s;
+}
+.sectionMenuGout .sectionMenuDessert2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.9s;
+}
+.sectionMenuGout .sectionMenuDessert3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 2.05s;
+}
+.sectionMenuGout .sectionMenuButton {
+  animation: buttonOpacity 0.65s 2.25s ease backwards;
+}
+
+.sectionMenuEnchantee .sectionMenuEntree {
+  animation: menuOpacity 0.25s 0.2s ease-out both;
+}
+.sectionMenuEnchantee .sectionMenuEntree1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.25s;
+}
+.sectionMenuEnchantee .sectionMenuEntree2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.4s;
+}
+.sectionMenuEnchantee .sectionMenuEntree3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.55s;
+}
+.sectionMenuEnchantee .sectionMenuEntree4 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.7s;
+}
+.sectionMenuEnchantee .sectionMenuPlat {
+  animation: menuOpacity 0.25s 0.9s ease-out both;
+}
+.sectionMenuEnchantee .sectionMenuPlat1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.15s;
+}
+.sectionMenuEnchantee .sectionMenuPlat2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.3s;
+}
+.sectionMenuEnchantee .sectionMenuPlat3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.45s;
+}
+.sectionMenuEnchantee .sectionMenuDessert {
+  animation: menuOpacity 0.25s 1.65s ease-out both;
+}
+.sectionMenuEnchantee .sectionMenuDessert1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.9s;
+}
+.sectionMenuEnchantee .sectionMenuDessert2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 2.05s;
+}
+.sectionMenuEnchantee .sectionMenuDessert3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 2.2s;
+}
+.sectionMenuEnchantee .sectionMenuButton {
+  animation: buttonOpacity 0.65s 2.4s ease backwards;
+}
+
+.sectionMenuFrancaise .sectionMenuEntree {
+  animation: menuOpacity 0.25s 0.2s ease-out both;
+}
+.sectionMenuFrancaise .sectionMenuEntree1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.25s;
+}
+.sectionMenuFrancaise .sectionMenuEntree2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.4s;
+}
+.sectionMenuFrancaise .sectionMenuEntree3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.55s;
+}
+.sectionMenuFrancaise .sectionMenuPlat {
+  animation: menuOpacity 0.25s 0.75s ease-out both;
+}
+.sectionMenuFrancaise .sectionMenuPlat1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1s;
+}
+.sectionMenuFrancaise .sectionMenuPlat2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.15s;
+}
+.sectionMenuFrancaise .sectionMenuPlat3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.3s;
+}
+.sectionMenuFrancaise .sectionMenuDessert {
+  animation: menuOpacity 0.25s 1.5s ease-out both;
+}
+.sectionMenuFrancaise .sectionMenuDessert1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.75s;
+}
+.sectionMenuFrancaise .sectionMenuDessert2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.9s;
+}
+.sectionMenuFrancaise .sectionMenuDessert3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 2.05s;
+}
+.sectionMenuFrancaise .sectionMenuButton {
+  animation: buttonOpacity 0.65s 2.25s ease backwards;
+}
+
+.sectionMenuDelice .sectionMenuEntree {
+  animation: menuOpacity 0.25s 0.2s ease-out both;
+}
+.sectionMenuDelice .sectionMenuEntree1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.25s;
+}
+.sectionMenuDelice .sectionMenuEntree2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.4s;
+}
+.sectionMenuDelice .sectionMenuEntree3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 0.55s;
+}
+.sectionMenuDelice .sectionMenuPlat {
+  animation: menuOpacity 0.25s 0.75s ease-out both;
+}
+.sectionMenuDelice .sectionMenuPlat1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1s;
+}
+.sectionMenuDelice .sectionMenuPlat2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.15s;
+}
+.sectionMenuDelice .sectionMenuPlat3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.3s;
+}
+.sectionMenuDelice .sectionMenuDessert {
+  animation: menuOpacity 0.25s 1.5s ease-out both;
+}
+.sectionMenuDelice .sectionMenuDessert1 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.75s;
+}
+.sectionMenuDelice .sectionMenuDessert2 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 1.9s;
+}
+.sectionMenuDelice .sectionMenuDessert3 {
+  animation: menuOpacity 0.3s ease-out both;
+  animation-delay: 2.05s;
+}
+.sectionMenuDelice .sectionMenuButton {
+  animation: buttonOpacity 0.65s 2.25s ease backwards;
 }
 
 .footer {

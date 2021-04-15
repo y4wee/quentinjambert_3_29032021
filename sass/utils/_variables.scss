@@ -8,3 +8,58 @@ $colorBack3: #353535;
 
 //margin
 $marginTitre: 50px 0 20px 22px;
+
+
+
+//loader animation
+$arcDuration: 0.9s;
+$spinnerDuration: 3s;
+$spinnerDelay: 0.2s;
+$slideDuration: 0.4s;
+$slideDelay: $spinnerDuration + $spinnerDelay;
+$outDelay: $slideDelay + $slideDuration;
+$shadowMin: 0px 0px 10px;
+$shadowMax: 0px 5px 30px;
+
+
+//menu animation
+$menuTranslY: 8px;
+$menuDuration: 0.25s;
+$menuDelay: 0.2s;
+$buttonDuration: 0.65s;
+//checkbox animation
+$checkboxDuration: 0.3s;
+$checkboxDelay: 0.15s;
+
+//palette du gout
+$goutEntreeNb: 3;
+$goutPlatNb: 3;
+$goutDessertNb: 3;
+
+$goutPlatDelay: $checkboxDuration + $checkboxDelay * $goutEntreeNb;
+$goutDessertDelay: $goutPlatDelay + $checkboxDuration + $checkboxDelay * $goutPlatNb;
+$goutButtonDelay: $goutDessertDelay + $checkboxDuration + $checkboxDelay * $goutDessertNb;
+// note enchantée
+$enchanteeEntreeNb: 4;
+$enchanteePlatNb: 3;
+$enchanteeDessertNb: 3;
+
+$enchanteePlatDelay: $checkboxDuration + $checkboxDelay * $enchanteeEntreeNb;
+$enchanteeDessertDelay: $enchanteePlatDelay + $checkboxDuration + $checkboxDelay * $enchanteePlatNb;
+$enchanteeButtonDelay: $enchanteeDessertDelay + $checkboxDuration + $checkboxDelay * $enchanteeDessertNb;
+//a la francaise
+$francaiseEntreeNb: 3;
+$francaisePlatNb: 3;
+$francaiseDessertNb: 3;
+
+$francaisePlatDelay: $checkboxDuration + $checkboxDelay * $francaiseEntreeNb;
+$francaiseDessertDelay: $francaisePlatDelay + $checkboxDuration + $checkboxDelay * $francaisePlatNb;
+$francaiseButtonDelay: $francaiseDessertDelay + $checkboxDuration + $checkboxDelay * $francaiseDessertNb;
+//delice des sens
+$deliceEntreeNb: 3;
+$delicePlatNb: 3;
+$deliceDessertNb: 3;
+
+$delicePlatDelay: $checkboxDuration + $checkboxDelay * $deliceEntreeNb;
+$deliceDessertDelay: $delicePlatDelay + $checkboxDuration + $checkboxDelay * $delicePlatNb;
+$deliceButtonDelay: $deliceDessertDelay + $checkboxDuration + $checkboxDelay * $deliceDessertNb;

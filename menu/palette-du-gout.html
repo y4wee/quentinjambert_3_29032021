@@ -19,20 +19,20 @@
             <div class="MenuBanniere MenuBanniereGout">
                 <div class="MenuBanniereText">
                     <h1>La palette du goût</h1>
-                    <label class="buttonCoeur">
-                        <input type="checkbox">
+                    <label class="buttonCoeur" for="favorisGoutPage">
+                        <input type="checkbox" id="favorisGoutPage">
                         <i class="far fa-heart"></i>
                         <span class="buttonCoeurCache"></span>
                     </label>
                 </div>
             </div>
             
-            <form class="sectionMenu">
+            <form class="sectionMenu sectionMenuGout">
 
                 <div class="sectionMenuEntree">
                     <h2>ENTRÉES</h2>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuEntree1 checkboxMenu" for="goutEntree1">
+                        <input type="checkbox" id="goutEntree1"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Fricassée d'escargot</span>
                             <span class="checkboxMenuTextDetail">
@@ -46,8 +46,8 @@
                             <i class="fas fa-check-circle"></i>
                         </span>
                     </label>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuEntree2 checkboxMenu" for="goutEntree2">
+                        <input type="checkbox" id="goutEntree2"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Foie gras de canard mi-cuit</span>
                             <span class="checkboxMenuTextDetail">
@@ -61,8 +61,8 @@
                             <i class="fas fa-check-circle"></i>
                         </span>
                     </label>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuEntree3 checkboxMenu" for="goutEntree3">
+                        <input type="checkbox" id="goutEntree3"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Oeuf au plat</span>
                             <span class="checkboxMenuTextDetail">
@@ -80,8 +80,8 @@
 
                 <div class="sectionMenuPlat">
                     <h2>PLATS</h2>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuPlat1 checkboxMenu" for="goutPlat1">
+                        <input type="checkbox" id="goutPlat1"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Filet de boeuf aux herbes</span>
                             <span class="checkboxMenuTextDetail">
@@ -95,8 +95,8 @@
                             <i class="fas fa-check-circle"></i>
                         </span>
                     </label>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuPlat2 checkboxMenu" for="goutPlat2">
+                        <input type="checkbox" id="goutPlat2"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Parmentier de queue de boeuf</span>
                             <span class="checkboxMenuTextDetail">
@@ -110,8 +110,8 @@
                             <i class="fas fa-check-circle"></i>
                         </span>
                     </label>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuPlat3 checkboxMenu" for="goutPlat3">
+                        <input type="checkbox" id="goutPlat3"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Filet de turbot</span>
                             <span class="checkboxMenuTextDetail">
@@ -129,8 +129,8 @@
 
                 <div class="sectionMenuDessert">
                     <h2>DESSERTS</h2>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuDessert1 checkboxMenu" for="goutDessert1">
+                        <input type="checkbox" id="goutDessert1"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Paris-Brest</span>
                             <span class="checkboxMenuTextDetail">
@@ -144,8 +144,8 @@
                             <i class="fas fa-check-circle"></i>
                         </span>
                     </label>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuDessert2 checkboxMenu" for="goutDessert2">
+                        <input type="checkbox" id="goutDessert2"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Macaron au chocolat d'exception </span>
                             <span class="checkboxMenuTextDetail">
@@ -159,8 +159,8 @@
                             <i class="fas fa-check-circle"></i>
                         </span>
                     </label>
-                    <label class="checkboxMenu">
-                        <input type="checkbox" />
+                    <label class="sectionMenuDessert3 checkboxMenu" for="goutDessert3">
+                        <input type="checkbox" id="goutDessert3"/>
                         <span class="checkboxMenuText">
                             <span class= "checkboxMenuTextPlat">Mousse au chocolat </span>
                             <span class="checkboxMenuTextDetail">
@@ -175,7 +175,7 @@
                         </span>
                     </label>
                 </div>
-                <input class="sectionMenuButton buttonSubmitSkin" type="submit" value="Commander">
+                <input class="sectionMenuButton buttonSubmitSkin" type="submit" value="Commander" id="commanderGout">
             </form>
 
             <footer class="footer">

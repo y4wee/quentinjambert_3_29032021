@@ -40,3 +40,140 @@
         margin: 45px auto;
     }
 }
+//animation chargement de page
+
+// page palette du gout
+.sectionMenuGout {
+    .sectionMenuEntree {
+        animation: menuOpacity $menuDuration $menuDelay ease-out both;
+        @for $i from 1 through $goutEntreeNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2;
+             }
+        }
+    }
+    .sectionMenuPlat {
+        animation: menuOpacity $menuDuration $goutPlatDelay ease-out both;
+        @for $i from 1 through $goutPlatNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $goutPlatDelay;
+             }
+        }
+    }
+    .sectionMenuDessert {
+        animation: menuOpacity $menuDuration $goutDessertDelay ease-out both;
+        @for $i from 1 through $goutDessertNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $goutDessertDelay;
+             }
+        }
+    }
+    .sectionMenuButton {
+        animation: buttonOpacity $buttonDuration $goutButtonDelay ease backwards;
+    }
+}
+
+// page note enchantée
+.sectionMenuEnchantee {
+    .sectionMenuEntree {
+        animation: menuOpacity $menuDuration $menuDelay ease-out both;
+        @for $i from 1 through $enchanteeEntreeNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2;
+             }
+        }
+    }
+    .sectionMenuPlat {
+        animation: menuOpacity $menuDuration $enchanteePlatDelay ease-out both;
+        @for $i from 1 through $enchanteePlatNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $enchanteePlatDelay;
+             }
+        }
+    }
+    .sectionMenuDessert {
+        animation: menuOpacity $menuDuration $enchanteeDessertDelay ease-out both;
+        @for $i from 1 through $enchanteeDessertNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $enchanteeDessertDelay;
+             }
+        }
+    }
+    .sectionMenuButton {
+        animation: buttonOpacity $buttonDuration $enchanteeButtonDelay ease backwards;
+    }
+}
+
+//page a la francaise
+.sectionMenuFrancaise {
+    .sectionMenuEntree {
+        animation: menuOpacity $menuDuration $menuDelay ease-out both;
+        @for $i from 1 through $francaiseEntreeNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2;
+             }
+        }
+    }
+    .sectionMenuPlat {
+        animation: menuOpacity $menuDuration $francaisePlatDelay ease-out both;
+        @for $i from 1 through $francaisePlatNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $francaisePlatDelay;
+             }
+        }
+    }
+    .sectionMenuDessert {
+        animation: menuOpacity $menuDuration $francaiseDessertDelay ease-out both;
+        @for $i from 1 through $francaiseDessertNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $francaiseDessertDelay;
+             }
+        }
+    }
+    .sectionMenuButton {
+        animation: buttonOpacity $buttonDuration $francaiseButtonDelay ease backwards;
+    }
+}
+
+//page delice des sens
+.sectionMenuDelice {
+    .sectionMenuEntree {
+        animation: menuOpacity $menuDuration $menuDelay ease-out both;
+        @for $i from 1 through $deliceEntreeNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2;
+             }
+        }
+    }
+    .sectionMenuPlat {
+        animation: menuOpacity $menuDuration $delicePlatDelay ease-out both;
+        @for $i from 1 through $delicePlatNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $delicePlatDelay;
+             }
+        }
+    }
+    .sectionMenuDessert {
+        animation: menuOpacity $menuDuration $deliceDessertDelay ease-out both;
+        @for $i from 1 through $deliceDessertNb {
+            &#{$i} {
+                animation: menuOpacity $checkboxDuration ease-out both;
+                animation-delay: $checkboxDelay * $i + $menuDelay / 2 + $deliceDessertDelay;
+             }
+        }
+    }
+    .sectionMenuButton {
+        animation: buttonOpacity $buttonDuration $deliceButtonDelay ease backwards;
+    }
+}

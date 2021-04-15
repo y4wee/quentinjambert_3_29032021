@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loaderOut 0.1s 3.6s linear forwards;
+    animation: loaderOut 0.1s $outDelay linear forwards;
     &BackLeft {
         position: fixed;
         top: 0;
@@ -15,7 +15,7 @@
         height: 100%;
         background-color: $colorBack2;
         z-index: 10;
-        animation: slideBackLeft 0.4s 3.1s ease-in forwards;
+        animation: slideBackLeft $slideDuration $slideDelay ease-in forwards;
     }
     &BackRight {
         position: fixed;
@@ -25,6 +25,6 @@
         height: 100%;
         background-color: $colorBack2;
         z-index: 10;
-        animation: slideBackRight 0.4s 3.1s ease-in forwards;
+        animation: slideBackRight $slideDuration $slideDelay ease-in forwards;
     }
 }

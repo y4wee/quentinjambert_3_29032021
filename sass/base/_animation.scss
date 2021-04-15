@@ -37,25 +37,25 @@
 // animation spinnerText
 @keyframes spinnerText {
     12.5% {
-        text-shadow: 0px 0px 10px $colorPrimaire;
+        text-shadow: $shadowMin $colorPrimaire;
     }
     25% {
-        text-shadow: 0px 0px 30px $colorSecondaire;
+        text-shadow: $shadowMax $colorSecondaire;
     }
     37.5% {
-        text-shadow: 0px 0px 10px $colorSecondaire;
+        text-shadow: $shadowMin $colorSecondaire;
     }
     50% {
-        text-shadow: 0px 0px 30px $colorTertiaire;
+        text-shadow: $shadowMax $colorTertiaire;
     }
     62.5% {
-        text-shadow: 0px 0px 10px $colorTertiaire;
+        text-shadow: $shadowMin $colorTertiaire;
     }
     75% {
-        text-shadow: 0px 0px 30px $colorSecondaire;
+        text-shadow: $shadowMax $colorSecondaire;
     }
     87.5% {
-        text-shadow: 0px 0px 10px $colorSecondaire;
+        text-shadow: $shadowMin $colorSecondaire;
     }
 }
 //animation slide backleft
@@ -64,15 +64,39 @@
         transform: translateX(-100%);
     }
 }
+//animation slide backright
 @keyframes slideBackRight {
     100% {
         transform: translateX(100%);
     }
 }
-//animation slide backright
 // animation pulste bouton favoris
 @keyframes pulseCoeur {
     50% {
         transform: scale(1.2);
+    }
+}
+//animation menu
+@keyframes menuOpacity {
+    0% {
+        transform: translateY($menuTranslY);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes buttonOpacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
