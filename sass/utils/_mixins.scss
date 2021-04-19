@@ -1,16 +1,26 @@
 // responsive
 @mixin mobile {
-    @media screen and (max-width: 599px) {
+    @media screen and (max-width: 699px) {
         @content;
     }
 }
 @mixin tablette {
-    @media screen and (min-width: 600px) and (max-width: 1024px) {
+    @media screen and (min-width: 700px) and (max-width: 1024px) {
         @content;
     }
 }
 @mixin desktop {
     @media screen and (min-width: 1025px) {
+        @content;
+    }
+}
+@mixin tabletteDesktop {
+    @media screen and (min-width: 700px) {
+        @content;
+    }
+}
+@mixin mediaMenu {
+    @media screen and (min-width: 1100px) {
         @content;
     }
 }

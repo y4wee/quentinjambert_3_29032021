@@ -1,11 +1,21 @@
 .restaurantSection {
     @extend %flex;
     flex-direction: column;
+    width: 100%;
     background-color: $colorBack1;
     h1 {
         margin: $marginTitre;
     }
     padding-bottom: 50px;
+    @include tabletteDesktop {
+        max-width: 1440px;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        h1 {
+            width: 100%;
+        }
+    }
 }
 .restaurantCarte {
     @extend %flex;
@@ -15,6 +25,9 @@
     margin: 10px auto;
     border-radius: 18px;
     box-shadow: 0 5px 10px lighten($colorBack3, 70%);
+    @include tabletteDesktop {
+        margin: 15px auto;
+    }
     a {
         text-decoration: none;
     }

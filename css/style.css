@@ -38,6 +38,11 @@
   font-family: "shrikhand";
   font-size: 1.2em;
 }
+@media screen and (min-width: 1025px) {
+  .footerLogo {
+    font-size: 1.5em;
+  }
+}
 
 .sectionMenuEntree h2 {
   font-size: 1.1em;
@@ -79,14 +84,14 @@ body {
   margin: auto;
   background-color: white;
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 699px) {
   .pageFlex {
     min-width: 350px;
   }
 }
 @media screen and (min-width: 1025px) {
   .pageFlex {
-    max-width: 1440px;
+    background-color: #f6f6f6;
   }
 }
 
@@ -194,7 +199,7 @@ body {
   height: 220px;
   transform: scale(0);
   opacity: 0;
-  animation: loaderOut 0.1s 3.6s linear, spinnerOpacity 3s 0.2s ease-in-out;
+  animation: loaderOut 0.1s 3.5s linear, spinnerOpacity 3s 0.2s ease-in-out;
 }
 .spinner::before {
   content: "";
@@ -243,7 +248,7 @@ body {
 .buttonSubmitSkin:hover {
   opacity: 0.85;
   box-shadow: 0 5px 10px #828282;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .buttonCoeur {
@@ -371,7 +376,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loaderOut 0.1s 3.6s linear forwards;
+  animation: loaderOut 0.1s 3.5s linear forwards;
 }
 .loaderBackLeft {
   position: fixed;
@@ -381,7 +386,7 @@ body {
   height: 100%;
   background-color: #eaeaea;
   z-index: 10;
-  animation: slideBackLeft 0.4s 3.2s ease-in forwards;
+  animation: slideBackLeft 0.3s 3.2s ease-in forwards;
 }
 .loaderBackRight {
   position: fixed;
@@ -391,13 +396,13 @@ body {
   height: 100%;
   background-color: #eaeaea;
   z-index: 10;
-  animation: slideBackRight 0.4s 3.2s ease-in forwards;
+  animation: slideBackRight 0.3s 3.2s ease-in forwards;
 }
 
 header {
-  height: 63px;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 63px;
   position: relative;
 }
 header img {
@@ -406,10 +411,25 @@ header img {
 }
 header .fa-arrow-left {
   position: absolute;
-  top: 19px;
+  top: 20px;
   left: 20px;
   font-size: 1.5em;
   color: #353535;
+}
+@media screen and (min-width: 1025px) {
+  header {
+    height: 130px;
+    background-color: white;
+  }
+  header img {
+    width: 200px;
+    height: auto;
+  }
+  header .fa-arrow-left {
+    top: 53px;
+    left: 40px;
+    font-size: 1.9em;
+  }
 }
 
 .headerAcceuil {
@@ -419,6 +439,13 @@ header .fa-arrow-left {
 .formAcceuil {
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 1025px) {
+  .formAcceuil {
+    max-width: 1440px;
+  }
 }
 .formAcceuil .formLocalisation {
   justify-content: center;
@@ -449,6 +476,11 @@ header .fa-arrow-left {
   width: 100%;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 1025px) {
+  .formAcceuil .formDescription {
+    background-color: white;
+  }
+}
 .formAcceuil .formDescription :nth-child(1) {
   max-width: 200px;
   margin: 40px 0 15px;
@@ -465,10 +497,27 @@ header .fa-arrow-left {
 
 .fonctionSection {
   flex-direction: column;
+  width: 100%;
+  margin: auto;
   padding-bottom: 55px;
 }
 .fonctionSection h1 {
   margin: 50px 0 20px 22px;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionSection {
+    max-width: 1440px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+  }
+  .fonctionSection h1 {
+    width: 100%;
+  }
+  .fonctionSection .fonctionRule {
+    width: 30%;
+    margin: 35px auto;
+  }
 }
 
 .fonctionRule {
@@ -510,11 +559,23 @@ header .fa-arrow-left {
 
 .restaurantSection {
   flex-direction: column;
+  width: 100%;
   background-color: #f6f6f6;
   padding-bottom: 50px;
 }
 .restaurantSection h1 {
   margin: 50px 0 20px 22px;
+}
+@media screen and (min-width: 700px) {
+  .restaurantSection {
+    max-width: 1440px;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurantSection h1 {
+    width: 100%;
+  }
 }
 
 .restaurantCarte {
@@ -524,6 +585,11 @@ header .fa-arrow-left {
   margin: 10px auto;
   border-radius: 18px;
   box-shadow: 0 5px 10px #e8e8e8;
+}
+@media screen and (min-width: 700px) {
+  .restaurantCarte {
+    margin: 15px auto;
+  }
 }
 .restaurantCarte a {
   text-decoration: none;
@@ -593,6 +659,31 @@ header .fa-arrow-left {
   background-size: cover;
   background-position: left 60% top 50%;
 }
+.MenuBanniereEnchantee {
+  background-image: url(../images/restaurant/enchantee.jpg);
+  background-size: cover;
+  background-position: left 60% top 50%;
+}
+.MenuBanniereFrancaise {
+  background-image: url(../images/restaurant/francaise.jpg);
+  background-size: cover;
+  background-position: left 5% bottom 10%;
+}
+.MenuBanniereDelice {
+  background-image: url(../images/restaurant/delice.jpg);
+  background-size: cover;
+  background-position: left;
+}
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .MenuBanniere {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .MenuBanniere {
+    height: 500px;
+  }
+}
 .MenuBanniereText {
   width: 100%;
   display: flex;
@@ -627,211 +718,239 @@ header .fa-arrow-left {
   width: 190px;
   margin: 45px auto;
 }
+@media screen and (min-width: 1100px) {
+  .sectionMenu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sectionMenu div {
+    width: 33%;
+    min-width: 350px;
+  }
+  .sectionMenu div h2 {
+    margin-left: 15%;
+  }
+  .sectionMenuButton {
+    margin: 80px auto 60px;
+  }
+}
 
 .sectionMenuGout .sectionMenuEntree {
   animation: menuOpacity 0.25s 0.2s ease-out both;
 }
 .sectionMenuGout .sectionMenuEntree1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.25s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.225s;
 }
 .sectionMenuGout .sectionMenuEntree2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.4s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.35s;
 }
 .sectionMenuGout .sectionMenuEntree3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.55s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.475s;
 }
 .sectionMenuGout .sectionMenuPlat {
-  animation: menuOpacity 0.25s 0.75s ease-out both;
+  animation: menuOpacity 0.25s 0.625s ease-out both;
 }
 .sectionMenuGout .sectionMenuPlat1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.85s;
 }
 .sectionMenuGout .sectionMenuPlat2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.15s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.975s;
 }
 .sectionMenuGout .sectionMenuPlat3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.3s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.1s;
 }
 .sectionMenuGout .sectionMenuDessert {
-  animation: menuOpacity 0.25s 1.5s ease-out both;
+  animation: menuOpacity 0.25s 1.25s ease-out both;
 }
 .sectionMenuGout .sectionMenuDessert1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.75s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.475s;
 }
 .sectionMenuGout .sectionMenuDessert2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.9s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.6s;
 }
 .sectionMenuGout .sectionMenuDessert3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 2.05s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.725s;
 }
 .sectionMenuGout .sectionMenuButton {
-  animation: buttonOpacity 0.65s 2.25s ease backwards;
+  animation: buttonOpacity 0.65s 1.875s ease backwards;
 }
 
 .sectionMenuEnchantee .sectionMenuEntree {
   animation: menuOpacity 0.25s 0.2s ease-out both;
 }
 .sectionMenuEnchantee .sectionMenuEntree1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.25s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.225s;
 }
 .sectionMenuEnchantee .sectionMenuEntree2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.4s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.35s;
 }
 .sectionMenuEnchantee .sectionMenuEntree3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.55s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.475s;
 }
 .sectionMenuEnchantee .sectionMenuEntree4 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.7s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.6s;
 }
 .sectionMenuEnchantee .sectionMenuPlat {
-  animation: menuOpacity 0.25s 0.9s ease-out both;
+  animation: menuOpacity 0.25s 0.75s ease-out both;
 }
 .sectionMenuEnchantee .sectionMenuPlat1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.15s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.975s;
 }
 .sectionMenuEnchantee .sectionMenuPlat2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.3s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.1s;
 }
 .sectionMenuEnchantee .sectionMenuPlat3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.45s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.225s;
 }
 .sectionMenuEnchantee .sectionMenuDessert {
-  animation: menuOpacity 0.25s 1.65s ease-out both;
+  animation: menuOpacity 0.25s 1.375s ease-out both;
 }
 .sectionMenuEnchantee .sectionMenuDessert1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.9s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.6s;
 }
 .sectionMenuEnchantee .sectionMenuDessert2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 2.05s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.725s;
 }
 .sectionMenuEnchantee .sectionMenuDessert3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 2.2s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.85s;
 }
 .sectionMenuEnchantee .sectionMenuButton {
-  animation: buttonOpacity 0.65s 2.4s ease backwards;
+  animation: buttonOpacity 0.65s 2s ease backwards;
 }
 
 .sectionMenuFrancaise .sectionMenuEntree {
   animation: menuOpacity 0.25s 0.2s ease-out both;
 }
 .sectionMenuFrancaise .sectionMenuEntree1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.25s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.225s;
 }
 .sectionMenuFrancaise .sectionMenuEntree2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.4s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.35s;
 }
 .sectionMenuFrancaise .sectionMenuEntree3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.55s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.475s;
 }
 .sectionMenuFrancaise .sectionMenuPlat {
-  animation: menuOpacity 0.25s 0.75s ease-out both;
+  animation: menuOpacity 0.25s 0.625s ease-out both;
 }
 .sectionMenuFrancaise .sectionMenuPlat1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.85s;
 }
 .sectionMenuFrancaise .sectionMenuPlat2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.15s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.975s;
 }
 .sectionMenuFrancaise .sectionMenuPlat3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.3s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.1s;
 }
 .sectionMenuFrancaise .sectionMenuDessert {
-  animation: menuOpacity 0.25s 1.5s ease-out both;
+  animation: menuOpacity 0.25s 1.25s ease-out both;
 }
 .sectionMenuFrancaise .sectionMenuDessert1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.75s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.475s;
 }
 .sectionMenuFrancaise .sectionMenuDessert2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.9s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.6s;
 }
 .sectionMenuFrancaise .sectionMenuDessert3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 2.05s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.725s;
 }
 .sectionMenuFrancaise .sectionMenuButton {
-  animation: buttonOpacity 0.65s 2.25s ease backwards;
+  animation: buttonOpacity 0.65s 1.875s ease backwards;
 }
 
 .sectionMenuDelice .sectionMenuEntree {
   animation: menuOpacity 0.25s 0.2s ease-out both;
 }
 .sectionMenuDelice .sectionMenuEntree1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.25s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.225s;
 }
 .sectionMenuDelice .sectionMenuEntree2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.4s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.35s;
 }
 .sectionMenuDelice .sectionMenuEntree3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 0.55s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.475s;
 }
 .sectionMenuDelice .sectionMenuPlat {
-  animation: menuOpacity 0.25s 0.75s ease-out both;
+  animation: menuOpacity 0.25s 0.625s ease-out both;
 }
 .sectionMenuDelice .sectionMenuPlat1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.85s;
 }
 .sectionMenuDelice .sectionMenuPlat2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.15s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 0.975s;
 }
 .sectionMenuDelice .sectionMenuPlat3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.3s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.1s;
 }
 .sectionMenuDelice .sectionMenuDessert {
-  animation: menuOpacity 0.25s 1.5s ease-out both;
+  animation: menuOpacity 0.25s 1.25s ease-out both;
 }
 .sectionMenuDelice .sectionMenuDessert1 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.75s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.475s;
 }
 .sectionMenuDelice .sectionMenuDessert2 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 1.9s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.6s;
 }
 .sectionMenuDelice .sectionMenuDessert3 {
-  animation: menuOpacity 0.3s ease-out both;
-  animation-delay: 2.05s;
+  animation: menuOpacity 0.25s ease-out both;
+  animation-delay: 1.725s;
 }
 .sectionMenuDelice .sectionMenuButton {
-  animation: buttonOpacity 0.65s 2.25s ease backwards;
+  animation: buttonOpacity 0.65s 1.875s ease backwards;
 }
 
 .footer {
   flex-direction: column;
   background-color: #353535;
   padding-bottom: 35px;
+}
+@media screen and (min-width: 1025px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footerLogo {
+    width: 100%;
+    text-align: center;
+  }
 }
 .footerLogo {
   color: white;

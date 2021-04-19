@@ -15,7 +15,7 @@ $marginTitre: 50px 0 20px 22px;
 $arcDuration: 0.9s;
 $spinnerDuration: 3s;
 $spinnerDelay: 0.2s;
-$slideDuration: 0.4s;
+$slideDuration: 0.3s;
 $slideDelay: $spinnerDuration + $spinnerDelay;
 $outDelay: $slideDelay + $slideDuration;
 $shadowMin: 0px 0px 10px;
@@ -28,10 +28,10 @@ $menuDuration: 0.25s;
 $menuDelay: 0.2s;
 $buttonDuration: 0.65s;
 //checkbox animation
-$checkboxDuration: 0.3s;
-$checkboxDelay: 0.15s;
+$checkboxDuration: 0.25s;
+$checkboxDelay: 0.125s;
 
-//palette du gout
+//palette du gout animation
 $goutEntreeNb: 3;
 $goutPlatNb: 3;
 $goutDessertNb: 3;
@@ -39,7 +39,7 @@ $goutDessertNb: 3;
 $goutPlatDelay: $checkboxDuration + $checkboxDelay * $goutEntreeNb;
 $goutDessertDelay: $goutPlatDelay + $checkboxDuration + $checkboxDelay * $goutPlatNb;
 $goutButtonDelay: $goutDessertDelay + $checkboxDuration + $checkboxDelay * $goutDessertNb;
-// note enchantée
+// note enchantée animation
 $enchanteeEntreeNb: 4;
 $enchanteePlatNb: 3;
 $enchanteeDessertNb: 3;
@@ -47,7 +47,7 @@ $enchanteeDessertNb: 3;
 $enchanteePlatDelay: $checkboxDuration + $checkboxDelay * $enchanteeEntreeNb;
 $enchanteeDessertDelay: $enchanteePlatDelay + $checkboxDuration + $checkboxDelay * $enchanteePlatNb;
 $enchanteeButtonDelay: $enchanteeDessertDelay + $checkboxDuration + $checkboxDelay * $enchanteeDessertNb;
-//a la francaise
+//a la francaise animation
 $francaiseEntreeNb: 3;
 $francaisePlatNb: 3;
 $francaiseDessertNb: 3;
@@ -55,7 +55,7 @@ $francaiseDessertNb: 3;
 $francaisePlatDelay: $checkboxDuration + $checkboxDelay * $francaiseEntreeNb;
 $francaiseDessertDelay: $francaisePlatDelay + $checkboxDuration + $checkboxDelay * $francaisePlatNb;
 $francaiseButtonDelay: $francaiseDessertDelay + $checkboxDuration + $checkboxDelay * $francaiseDessertNb;
-//delice des sens
+//delice des sens animation
 $deliceEntreeNb: 3;
 $delicePlatNb: 3;
 $deliceDessertNb: 3;

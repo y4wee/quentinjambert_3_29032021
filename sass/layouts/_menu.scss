@@ -6,6 +6,24 @@
         @include backImage(gout);
         background-position: left 60% top 50%;
     }
+    &Enchantee {
+        @include backImage(enchantee);
+        background-position: left 60% top 50%;
+    }
+    &Francaise {
+        @include backImage(francaise);
+        background-position: left 5% bottom 10%;
+    }
+    &Delice {
+        @include backImage(delice);
+        background-position: left;
+    }
+    @include tablette {
+        height: 400px;
+    }
+    @include desktop {
+        height: 500px;
+    }
     &Text {
         width: 100%;
         display: flex;
@@ -38,6 +56,21 @@
     &Button {
         width: 190px;
         margin: 45px auto;
+    }
+    @include mediaMenu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        div {
+            width: 33%;
+            min-width: 350px;
+            h2 {
+                margin-left: 15%;
+            }
+        }
+        &Button {
+            margin: 80px auto 60px;
+        }
     }
 }
 //animation chargement de page

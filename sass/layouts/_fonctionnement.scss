@@ -1,10 +1,25 @@
 .fonctionSection {
     @extend %flex;
     flex-direction: column;
+    width: 100%;
+    margin: auto;
     h1 {
         margin: $marginTitre;
     }
     padding-bottom: 55px;
+    @include desktop {
+        max-width: 1440px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        h1 {
+            width: 100%
+        }
+        .fonctionRule {
+            width: 30%;
+            margin: 35px auto;
+        }
+    }
 }
 .fonctionRule {
     @extend %flex;

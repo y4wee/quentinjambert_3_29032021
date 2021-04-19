@@ -2,6 +2,11 @@
     @extend %flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin: auto;
+    @include desktop {
+        max-width: 1440px;
+    }
     .formLocalisation {
         @include flexCenter;
         width: 100%;
@@ -28,6 +33,9 @@
         text-align: center;
         width: 100%;
         background-color: $colorBack1;
+        @include desktop {
+            background-color: white;
+        }
         & :nth-child(1) {
             max-width: 200px;
             margin: 40px 0 15px;
